@@ -1,0 +1,22 @@
+.landingPage {
+  background-image: url('https://secure-media.hotstar.com/static/sunset/us/assets/web/background-2.png');
+  height: 100%;
+}
+
+.landingPage__btn{
+  font-family: 'Inter', sans-serif;
+  width: 60%;
+  height: 50px;
+  font-weight: bold;
+
+}
+.landingPage__btn > a {
+  border-radius: 5px;
+  height: 100%;
+  display: flex;
+  
+}
+
+.font-inter{
+  font-family: 'Inter', sans-serif;
+}
