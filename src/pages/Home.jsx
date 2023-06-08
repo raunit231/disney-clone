@@ -1,9 +1,10 @@
 
 import React, { useEffect, useState } from 'react'
-import Header from '../components/Header';
 import SimpleImageSlider from 'react-simple-image-slider';
 import './Home.css'
 import { Type } from '../components/Type';
+import Sidebar from '../components/Sidebar';
+import Footer from '../components/Footer';
 
 function Home() {
   const [data, setData] = useState(null);
@@ -34,46 +35,51 @@ function Home() {
     }
   }, [isLoading, data]);
 
-  console.log(sliderImg);
   return (
-    <div className='bg-black'>
-      <Header />
+    <>
+    <div className='bg-black flex'>
       {/* Slider */}
-      <div className="home__slider">
-        {sliderImg &&
-          <SimpleImageSlider
-            width="100%"
-            height={504}
-            images={sliderImg}
-            showNavs={true}
-            autoPlay={true}
-          />}
+      <div className="sidebar">
+        <Sidebar/>
       </div>
-      <div className="flex flex-col">
-        {!isLoading &&
-          <Type
-            title={"Latest and Trending"}
-            data={data}
-            types={["new","trending"]}
-          />
-        }
-        {!isLoading &&
-          <Type
-            title={"Recommended for you"}
-            data={data}
-            types={["recommend"]}
-          />
-        }
-        {!isLoading &&
-          <Type
-            title={"Disney+ Original"}
-            data={data}
-            types={["original"]}
-          />
-        }
+      <div className='mainbar'>
+        <div className="home__slider">
+          {sliderImg &&
+            <SimpleImageSlider
+              width={'94%'}
+              height={504}
+              images={sliderImg}
+              showNavs={true}
+              autoPlay={true}
+            />}
+        </div>
+        <div className="flex flex-col">
+          {!isLoading &&
+            <Type
+              title={"Latest and Trending"}
+              data={data}
+              types={["new", "trending"]}
+            />
+          }
+          {!isLoading &&
+            <Type
+              title={"Recommended for you"}
+              data={data}
+              types={["recommend"]}
+            />
+          }
+          {!isLoading &&
+            <Type
+              title={"Disney+ Original"}
+              data={data}
+              types={["original"]}
+            />
+          }
+          <Footer/>
+        </div>
       </div>
-
     </div>
+    </>
   )
 }
 

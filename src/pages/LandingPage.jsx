@@ -26,6 +26,7 @@ function LandingPage() {
           <img className='w-1/2' src={require("../assets/images/logos.png")} alt="" />
         </div>
       </div>
+      {/* <Footer/> */}
     </div>
   )
 }

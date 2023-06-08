@@ -1,8 +1,8 @@
 import { ImageCard } from "./ImageCard"
-
+import './Type.css'
 export const Type = ({ data, title, types }) => <div className='my-4 flex flex-col'>
   <div className='font-bold text-2xl text-white font-inter ml-7'>{title}</div>
-  <div className='flex overflow-auto py-6'>
+  <div className='flex overflow-x-scroll scroll py-6'>
     {data.filter(d => types.includes(d.type)).map((d, index) => {
       return <div
       key={d.id} 

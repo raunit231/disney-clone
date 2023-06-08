@@ -1,4 +1,18 @@
-
+::-webkit-scrollbar {
+  width: 0.0em;
+  background-color: transparent;
+}
 .font-inter{
   font-family: 'Inter', sans-serif;
+}
+
+.sidebar {
+  flex: 0.06;
+}
+.mainbar {
+  flex: 0.94;
+}
+
+.home__slider {
+  width: 100%;
 }

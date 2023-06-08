@@ -1,0 +1,9 @@
+.scroll::-webkit-scrollbar {
+  width: 0.0em;
+}
+
+.scroll {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+}
